@@ -64,9 +64,9 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/ai-sound-waves"
+            href="/works"
             className={`header-nav-link text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg pb-1 border-b ${
-              pathname === "/ai-sound-waves"
+              pathname === "/works"
                 ? "header-nav-link-active font-bold border-black dark:border-white"
                 : "border-transparent"
             }`}
