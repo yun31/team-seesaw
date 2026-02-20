@@ -5,7 +5,9 @@
   --foreground: #171717;
   --font-biorhyme: "BioRhyme Expanded", serif;
   --font-cormorant: "Cormorant Garamond", serif;
-  --font-pretendard: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-pretendard:
+    "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
   --font-gowun: "Gowun Dodum", sans-serif;
 }
 
@@ -26,7 +28,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
   font-family:
     "Pretendard Variable",
     Pretendard,
@@ -60,7 +64,9 @@ body.saw-selected div.min-h-screen {
 body.saw-selected * {
   color: #fff;
   border-color: rgba(255, 255, 255, 0.2);
-  transition: color 0.5s ease, border-color 0.5s ease;
+  transition:
+    color 0.5s ease,
+    border-color 0.5s ease;
 }
 /* SAW 시 헤더 네비: 비선택은 밑줄 없음, 선택된 메뉴만 흰색 밑줄 */
 body.saw-selected header .header-nav-link {
@@ -88,13 +94,31 @@ body.saw-selected [class*="text-zinc-500"] {
 }
 @media (prefers-color-scheme: dark) {
   .lower-content-muted {
-    color: #ACACAC;
+    color: #acacac;
   }
 }
 body.saw-selected .lower-content-muted {
-  color: #ACACAC !important;
+  color: #acacac !important;
 }
 body.saw-selected .bg-black,
 body.saw-selected [class*="bg-zinc-100"] {
   background-color: #fff;
+}
+
+/* works 페이지: 검정 배경이므로 헤더를 흰색으로 */
+.works-page header,
+.works-page header a,
+.works-page header button,
+.works-page header span {
+  color: #fff !important;
+}
+.works-page header .header-nav-link {
+  border-bottom-color: transparent !important;
+}
+.works-page header .header-nav-link-active {
+  border-bottom-color: #fff !important;
+}
+.works-page header a:hover,
+.works-page header button:hover {
+  opacity: 0.8;
 }
