@@ -1,23 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Header() {
-  const [lang, setLang] = useState<"KR" | "EN">("KR");
+  const { lang, setLang } = useLanguage();
 
   return (
     <header className="flex w-full flex-col gap-1 px-4 py-4 sm:gap-2 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-16">
-      {/* 위쪽 줄: 오른쪽에 KR / EN만 */}
-      <div className="flex justify-end">
+      {/* 위쪽 줄: 오른쪽에 KR / EN 버튼 */}
+      <div className="flex justify-end gap-1 sm:gap-2">
         <button
           type="button"
-          onClick={() => setLang(lang === "KR" ? "EN" : "KR")}
-          className="whitespace-nowrap text-xs text-black hover:opacity-70 dark:text-zinc-50 sm:text-sm"
+          onClick={() => setLang("KR")}
+          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "KR" ? "font-semibold text-black dark:text-zinc-50 opacity-100" : "text-black/60 dark:text-zinc-400 hover:opacity-80"}`}
           style={{ fontFamily: "var(--font-pretendard)" }}
-          aria-label={lang === "KR" ? "Switch to English" : "한국어로 전환"}
+          aria-label="한국어"
+          aria-pressed={lang === "KR"}
         >
-          KR / EN
+          KR
+        </button>
+        <span
+          className="text-xs text-black/40 dark:text-zinc-500 sm:text-sm"
+          aria-hidden
+        >
+          /
+        </span>
+        <button
+          type="button"
+          onClick={() => setLang("EN")}
+          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "EN" ? "font-semibold text-black dark:text-zinc-50 opacity-100" : "text-black/60 dark:text-zinc-400 hover:opacity-80"}`}
+          style={{ fontFamily: "var(--font-pretendard)" }}
+          aria-label="English"
+          aria-pressed={lang === "EN"}
+        >
+          EN
         </button>
       </div>
 
