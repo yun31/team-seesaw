@@ -42,6 +42,32 @@ export default function Home() {
 
       {/* Lower content: vertical SEESAW + paragraphs (KR/EN 전환) */}
       <MainPageLowerContent />
+
+      {/* 이메일 연락처 */}
+      <footer className="mt-2 flex w-full justify-center pb-16 sm:mt-4 sm:pb-20">
+        <a
+          href="mailto:admin@teamseesaw.com"
+          className="flex items-center gap-2 font-medium text-base text-black/80 hover:text-black hover:opacity-90 dark:text-zinc-400 dark:hover:text-white sm:gap-3 sm:text-lg"
+          style={{ fontFamily: "var(--font-cormorant)" }}
+        >
+          <span className="sr-only">Email: </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="size-5 shrink-0"
+            aria-hidden
+          >
+            <rect width="20" height="16" x="2" y="4" />
+            <path d="M2 7 L12 14 L22 7" />
+          </svg>
+          admin@teamseesaw.com
+        </a>
+      </footer>
     </div>
   );
 }

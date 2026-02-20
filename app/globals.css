@@ -62,6 +62,22 @@ body.saw-selected * {
   border-color: rgba(255, 255, 255, 0.2);
   transition: color 0.5s ease, border-color 0.5s ease;
 }
+/* SAW 시 헤더 네비: 비선택은 밑줄 없음, 선택된 메뉴만 흰색 밑줄 */
+body.saw-selected header .header-nav-link {
+  border-color: transparent !important;
+}
+body.saw-selected header .header-nav-link-active {
+  border-color: #fff !important;
+}
+/* 시스템 다크 모드에서도 동일: 비선택 밑줄 없음, 선택만 흰색 */
+@media (prefers-color-scheme: dark) {
+  header .header-nav-link {
+    border-bottom-color: transparent;
+  }
+  header .header-nav-link-active {
+    border-bottom-color: #fff !important;
+  }
+}
 body.saw-selected [class*="text-zinc-400"],
 body.saw-selected [class*="text-zinc-500"] {
   color: rgba(255, 255, 255, 0.6);

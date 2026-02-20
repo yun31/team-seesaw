@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Header() {
   const { lang, setLang } = useLanguage();
+  const pathname = usePathname();
 
   return (
     <header className="flex w-full flex-col gap-1 px-4 py-4 sm:gap-2 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-16">
@@ -53,13 +55,21 @@ export default function Header() {
         >
           <Link
             href="/"
-            className="text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg"
+            className={`header-nav-link text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg pb-1 border-b-2 ${
+              pathname === "/"
+                ? "header-nav-link-active font-bold border-black dark:border-white"
+                : "border-transparent"
+            }`}
           >
             Home
           </Link>
           <Link
             href="/ai-sound-waves"
-            className="text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg"
+            className={`header-nav-link text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg pb-1 border-b ${
+              pathname === "/ai-sound-waves"
+                ? "header-nav-link-active font-bold border-black dark:border-white"
+                : "border-transparent"
+            }`}
             title="AI · Sound Works"
           >
             <span className="sm:hidden">Works</span>
@@ -67,7 +77,11 @@ export default function Header() {
           </Link>
           <Link
             href="/history"
-            className="text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg"
+            className={`header-nav-link text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg pb-1 border-b ${
+              pathname === "/history"
+                ? "header-nav-link-active font-bold border-black dark:border-white"
+                : "border-transparent"
+            }`}
           >
             History
           </Link>
