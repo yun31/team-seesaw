@@ -6,23 +6,23 @@ const WORKS = [
   {
     year: "2025",
     category: "AI Exhibition",
-    title: "《SAFE RANGE SYSTEM》",
+    title: "SAFE RANGE SYSTEM",
     image: "/image/thum_safe.png",
-    detailHref: "/works/safe",
+    detailHref: "/works/safe-range-system",
   },
   {
     year: "2025",
     category: "VR Exhibition",
-    title: "《Resonance Protocol》",
+    title: "RESONANCE PROTOCOL",
     image: "/image/thum_vr.png",
-    detailHref: "/works/vr",
+    detailHref: "/works/resonance-protocol",
   },
   {
     year: "2024",
     category: "AI Sound Universal Project",
-    title: "《SIGNAL AS FORM》",
+    title: "SIGNAL AS FORM",
     image: "/image/thum_silo.png",
-    detailHref: "/works/silo",
+    detailHref: "/works/signal-as-form",
   },
 ] as const;
 
