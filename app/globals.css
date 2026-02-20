@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-biorhyme: "BioRhyme Expanded", serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-pretendard: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-gowun: "Gowun Dodum", sans-serif;
 }
 
 @theme inline {
@@ -22,5 +26,56 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  letter-spacing: -0.4px;
+}
+
+/* SAW 선택 시: 메인 페이지 배경 검정, 모든 텍스트·선·원 흰색 */
+body.saw-selected {
+  background: #000 !important;
+  color: #fff;
+}
+/* 페이지 루트 div의 bg-[#E6E7E9] 덮기 (Next 래퍼 또는 page 최상위 div) */
+body.saw-selected > div,
+body.saw-selected div.min-h-screen {
+  background: #000 !important;
+}
+body.saw-selected * {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+body.saw-selected [class*="text-zinc-400"],
+body.saw-selected [class*="text-zinc-500"] {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* Lower content 회색 문단: 다크/SAW 모드에서도 #ACACAC 유지 */
+.lower-content-muted {
+  color: #727272;
+}
+@media (prefers-color-scheme: dark) {
+  .lower-content-muted {
+    color: #ACACAC;
+  }
+}
+body.saw-selected .lower-content-muted {
+  color: #ACACAC !important;
+}
+body.saw-selected .bg-black,
+body.saw-selected [class*="bg-zinc-100"] {
+  background-color: #fff;
 }
