@@ -13,7 +13,7 @@ export default function Home() {
           className="mt-1 text-xl font-medium tracking-tight text-black sm:text-2xl md:text-4xl lg:text-5xl dark:text-zinc-50"
           style={{ fontFamily: "var(--font-cormorant)" }}
         >
-          {"{SEESAW"}
+          {"{ SEESAW"}
         </p>
         {/* 문구 끝 지점 바로 아래에 세로선 + 선 기준 가운데 정렬 문단 */}
         <div className="relative mt-1 inline-block sm:mt-2 md:mt-6">
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="flex min-w-0 flex-1 flex-col gap-4 text-sm leading-relaxed text-black/90 sm:gap-5 sm:text-base md:gap-6 md:text-lg dark:text-white"
+            className="flex min-w-0 flex-1 flex-col gap-4 text-sm leading-relaxed text-black/90 sm:gap-5 sm:text-base md:gap-6 md:text-sm dark:text-white"
             style={{ fontFamily: "var(--font-pretendard)" }}
           >
             <p>
