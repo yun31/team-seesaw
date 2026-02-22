@@ -304,9 +304,9 @@ export default function CenterImageSection() {
               }}
               aria-hidden
             />
-            {/* SEE / SAW 라벨: 크기·색 전환 */}
+            {/* SEE / SAW 라벨: 크기·색 전환. 비선택 쪽에 호흡 애니메이션. seesaw-label-transition으로 SAW 선택 시에도 크기 전환 유지 */}
             <span
-              className={`absolute pointer-events-none font-bold whitespace-nowrap transition-all duration-500 ease-in-out ${
+              className={`seesaw-label-transition absolute pointer-events-none font-bold whitespace-nowrap ${
                 sawUp
                   ? "text-zinc-400 dark:text-zinc-400 text-sm md:text-lg lg:text-xl"
                   : "text-black dark:text-zinc-100 text-3xl md:text-4xl lg:text-5xl"
@@ -318,10 +318,12 @@ export default function CenterImageSection() {
                 transform: "translate(-50%, calc(-100% - 0.5em))",
               }}
             >
-              SEE
+              <span className={sawUp ? "seesaw-label-breathe" : undefined}>
+                SEE
+              </span>
             </span>
             <span
-              className={`absolute pointer-events-none font-bold whitespace-nowrap transition-all duration-500 ease-in-out ${
+              className={`seesaw-label-transition absolute pointer-events-none font-bold whitespace-nowrap ${
                 sawUp
                   ? "text-black dark:text-zinc-100 text-3xl md:text-4xl lg:text-5xl"
                   : "text-zinc-400 dark:text-zinc-400 text-sm md:text-lg lg:text-xl"
@@ -333,7 +335,9 @@ export default function CenterImageSection() {
                 transform: "translate(-50%, calc(-100% - 0.5em))",
               }}
             >
-              SAW
+              <span className={!sawUp ? "seesaw-label-breathe" : undefined}>
+                SAW
+              </span>
             </span>
             {/* SEE 히트박스: 선 왼쪽 끝(SEE) 위치에 맞춤 */}
             <button

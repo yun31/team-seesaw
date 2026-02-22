@@ -68,6 +68,14 @@ body.saw-selected * {
     color 0.5s ease,
     border-color 0.5s ease;
 }
+/* SEE/SAW 라벨: SAW 선택 시에도 크기 전환 유지 (body.saw-selected * 가 transition 덮어쓰는 것 방지) */
+body.saw-selected .seesaw-label-transition,
+.seesaw-label-transition {
+  transition:
+    font-size 500ms ease-in-out,
+    color 500ms ease-in-out,
+    opacity 500ms ease-in-out;
+}
 /* SAW 시 헤더 네비: 비선택은 밑줄 없음, 선택된 메뉴만 흰색 밑줄 */
 body.saw-selected header .header-nav-link {
   border-color: transparent !important;
@@ -149,4 +157,19 @@ body.saw-selected [class*="bg-zinc-100"] {
 }
 .volume-triangle-pulse {
   animation: volume-triangle-pulse 811ms ease-in-out infinite;
+}
+
+/* 메인 시소: 선택되지 않은 SEE/SAW 라벨 호흡 애니메이션 (클릭 유도) */
+@keyframes seesaw-label-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+.seesaw-label-breathe {
+  display: inline-block;
+  animation: seesaw-label-breathe 1.8s ease-in-out infinite;
 }
