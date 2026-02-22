@@ -37,7 +37,7 @@ export default function ExhibitionTabContent() {
           <p className="text-sm leading-relaxed text-white/90 sm:text-base">
             {BODY_TEXT}
           </p>
-          <div className="relative aspect-3/4 w-full overflow-hidden sm:aspect-auto sm:min-h-[280px] sm:flex-1">
+          <div className="relative min-h-[320px] w-full overflow-hidden sm:min-h-[480px]">
             <Image
               src={`${IMG}/safe_ex_4.png`}
               alt=""
@@ -46,7 +46,7 @@ export default function ExhibitionTabContent() {
             />
           </div>
         </div>
-        <div className="relative min-h-[320px] w-full overflow-hidden sm:min-h-[480px]">
+        <div className="relative aspect-3/4 w-full overflow-hidden sm:aspect-auto sm:min-h-[280px] sm:flex-1">
           <Image
             src={`${IMG}/safe_ex_3.png`}
             alt=""

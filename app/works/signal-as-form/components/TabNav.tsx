@@ -1,11 +1,10 @@
 "use client";
 
-export type TabId = "ai" | "sound" | "exhibition";
+export type TabId = "overview" | "ai";
 
 const TABS: { id: TabId; label: string }[] = [
+  { id: "overview", label: "Overview" },
   { id: "ai", label: "AI" },
-  { id: "sound", label: "Sound" },
-  { id: "exhibition", label: "Exhibition" },
 ];
 
 type Props = {
@@ -18,7 +17,7 @@ export function TabNav({ activeTab, onTabChange }: Props) {
     <nav
       className="mt-8 flex items-center justify-center gap-2 sm:mt-10"
       style={{ fontFamily: "var(--font-pretendard)" }}
-      aria-label="AI, Sound, Exhibition tabs"
+      aria-label="Overview, AI tabs"
     >
       {TABS.map((tab, i) => (
         <span key={tab.id} className="flex items-center gap-2">
