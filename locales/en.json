@@ -66,15 +66,15 @@
     "safeRangeSystem": {
       "ai": {
         "description": [
-          "SAFE RANGE SYSTEM is an algorithmic system that operates on real-time face recognition and voice analysis.",
-          "Data collected through camera and microphone is quantified through facial landmark extraction, micro-expression analysis, gaze tracking, voice spectrum analysis, and measurement of inter-utterance intervals. This data is parameterized by deviation from a statistical average and repositioned within an allowable range via a normalization algorithm.",
-          "The face is output as a 3D mask based on an average model; voice is aligned to a 74 BPM rhythmic structure through digital signal processing and BPM synchronization. As a result, the individual’s distinct signals are not expanded but realigned around statistical stability, and the algorithm functions as a mechanism that converges signals toward a standard."
+          "SAFE RANGE SYSTEM is an algorithmic framework driven by real-time face recognition and voice analysis.",
+          "Data captured through camera and microphone—facial landmarks, micro-expressions, gaze, voice spectrum, and speech intervals—is quantified and normalized against statistical averages.",
+          "The system outputs an averaged 3D facial mask and aligns voice to a 74 BPM rhythm, recalibrating individual signals toward algorithmic stability."
         ],
         "row2": [
-          "The work is composed of a system that collects, as input, the subtle signals detected from the audience’s face. Real-time visual data—eye movement, pupil response, lip curvature, facial muscle tension—is separated into individual elements and measured at the live input stage, then passed to the stage of Algorithmic Interpretation.",
-          "At this stage each signal is converted into a value called the Divergence Index, which measures how far it deviates from the statistical average. These deviations are not preserved as individual traits but are rearranged into quantified structural values through a process of parameterization.",
-          "The organized data is adjusted into an allowable range as it passes through a normalization field. It is then reconstructed against an average model and finally visualized as a 3D mask.",
-          "The system does not create a new face; it works by adjusting measured difference to fit a standard structure."
+          "The work operates as a system that captures subtle facial signals from the audience in real time. Eye movement, pupil response, lip curvature, and facial muscle tension are separated into measurable elements and passed to an algorithmic interpretation stage.",
+          "Each signal is translated into a Divergence Index, indicating its distance from a statistical average. Rather than preserving these deviations as individual traits, the system parameterizes them into structured values.",
+          "The data then moves through a normalization field, where it is adjusted to fit an allowable range, reconstructed against an average model, and visualized as a 3D mask.",
+          "The system does not generate a new face; it recalibrates difference to conform to a predefined structure."
         ]
       },
       "exhibition": {
