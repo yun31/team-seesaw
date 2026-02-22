@@ -42,7 +42,7 @@ export default function AITabContent() {
       style={{ fontFamily: "var(--font-pretendard)" }}
     >
       {/* 상단 인트로 텍스트 */}
-      <p className="text-sm text-center leading-relaxed text-white/95 sm:text-base">
+      <p className="text-center text-sm leading-relaxed text-white/95 sm:text-base">
         본 프레임워크는 인공지능을 감각 번역 시스템으로 다루며,
         <br />
         음향 신호를 정서 밀도로 전환하는 과정을 탐구한다.
@@ -93,24 +93,24 @@ export default function AITabContent() {
       </div>
 
       {/* System 이미지 (silo_ai_2) */}
-      <div className="mt-20 overflow-hidden rounded-xl items-center justify-center">
+      <div className="mt-20 flex items-center justify-center overflow-hidden rounded-xl">
         <Image
           src="/image/silo_ai_2.png"
           alt="System diagram"
           width={900}
           height={500}
-          className="h-auto w-[80%] object-contain mx-auto sm:w-[60%]"
+          className="h-auto w-[80%] object-contain sm:w-[60%]"
         />
       </div>
 
       {/* 시스템 플로우 다이어그램 */}
-      <div className="overflow-hidden rounded-xl items-center justify-center">
+      <div className="flex items-center justify-center overflow-hidden rounded-xl">
         <Image
           src="/image/silo_ai_3.png"
           alt="System flow: Input & Tracking → Signal Processing & Control → Output Driving → Multi-Channel Haptic Feedback"
           width={900}
           height={500}
-          className="h-auto w-[90%] object-contain mx-auto sm:w-[70%]"
+          className="h-auto w-[90%] object-contain sm:w-[70%]"
         />
       </div>
     </div>
