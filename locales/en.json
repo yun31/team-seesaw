@@ -1,0 +1,85 @@
+{
+  "home": {
+    "lowerContent": {
+      "p1": "SEESAW is an AI interaction collective composed of Hyundong Kim,\nDanbi Park, Seungwoo Seo, and Yunseo Choi. With backgrounds in\nsound and visual design, AI development, and HCI research, the\ncollective designs translation structures between artificial\nintelligence technologies and sensory experience.",
+      "p2": "Through data extraction and perception technologies, SEESAW\ndetects human signals such as emotion, behavior, and rhythm,\nand reconstructs them into visual and sonic languages.\nTechnology is not treated merely as a tool for implementation,\nbut as a medium that reveals underlying social structures.",
+      "p3": "The collective proposes experiential frameworks that examine\nhow algorithms interpret humans, and how such interpretations\nshape social norms, power dynamics, and forms of perception.",
+      "p4": "AI is both potential and paradox.\nIt amplifies expansion and connection while simultaneously\nembedding standardization and control. SEESAW understands\nthis duality as a spectrum, exploring both the beneficial\nfunctions of technology and its structural tensions.",
+      "p5": "Rather than presenting judgments, the collective generates\nquestions; rather than concluding, it keeps discourse open.",
+      "p6": "SEESAW observes the shifting balance at the intersection of\ntechnology and humanity, data and emotion, systems and\nsociety—continuously experimenting with new sensory\nlanguages and technological discourse within that tension."
+    }
+  },
+  "works": {
+    "resonanceProtocol": {
+      "p1": "Resonance Protocol is a VR work that, rather than focusing on the moment when human emotion is “read” by technology, reveals how that emotion is formalized and arranged. The audience enters a dark virtual space and experiences their breath, voice, and movement translated into waves of light and sound. This translation feels intuitive and beautiful, but over time the structure gradually aligns toward a particular spectrum.",
+      "p2": "Emotion is reconstructed not as a free flow but into increasingly stable, predictable categories. The audience feels they are expressing themselves while at the same time becoming aware that they are adjusting themselves to obtain clearer, more harmonious feedback. In this process, technology operates beyond a mere sensing device—as a system that designs the form of emotion.",
+      "p3": "Through this work, SEESAW proposes that emotion-recognition technology is not a neutral tool but a translation device that places human sensation within a fixed structure. Resonance Protocol leaves us with questions: How autonomous is the emotion we experience? And upon whose criteria is the “stable model” offered by technology built?"
+    },
+    "signalAsForm": {
+      "overview": {
+        "title": "Sound Visualization",
+        "intro1": "Sound Visualization begins from research that treats AI as a translation device for expanding the senses. This work recognizes sound not as an auditory phenomenon but as an analyzable signal structure, and explores the process of converting its physical properties into visual and spatial form.",
+        "intro2": "Through data extraction and recognition technologies, we decompose volume, amplitude, frequency, and rhythm and reconstruct them in four modes of representation: wave, dot, particle, and spectrum. Volume changing over time is translated into three-dimensional curves; frequency distribution into a sphere of points; rhythm into the diffusion and density of particles. This visualization lets one experience sound as form and motion—an experiment in sensory translation that extends hearing-centered sensation into visual structure.",
+        "spec": "2024, Audio-visual Research Prototype, Real-time generative visualization, Stereo Sound, Dimensions variable",
+        "technicalTitle": "Technical Setup",
+        "technicalBody": "Stereo sound system, Full HD projection, Real-time processing workstation, Microphone input",
+        "softwareTitle": "Software"
+      },
+      "ai": {
+        "intro": "This framework treats artificial intelligence as a sensory translation system and\nexplores the process of converting acoustic signals into affective density.",
+        "impactTitle": "Our AI Impact",
+        "blocks": [
+          {
+            "title": "Timbre Analysis–Based PBR Material Mapping AI",
+            "subtitle": "Timbre Analysis-Based Physically Based Rendering (PBR) Material Mapping AI",
+            "body": [
+              "The same note can sound cold like metal or warm like wood. Timbre is not merely pitch but structure.",
+              "The AI extracts physical properties of sound—frequency spectrum, harmonic density, energy distribution—and this data is translated into surface texture attributes through Physically Based Rendering (PBR).",
+              "Sound becomes surface; frequency becomes texture.",
+              "A single note may be visualized as highly reflective metal or as warm wood grain. This is not metaphor but data-driven translation.",
+              "The process reveals qualitative differences in music as visual and spatial structure, expanding the accessibility of timbral perception."
+            ]
+          },
+          {
+            "title": "Valence–Arousal Estimation–Based Color Mapping AI",
+            "subtitle": "Valence-Arousal Estimation-Based Color Mapping AI",
+            "body": [
+              "In music-emotion research, Russell’s Circumplex Model of Affect is widely used. Valence (pleasure–displeasure) and Arousal (tension–activity) form a two-dimensional structure of affect.",
+              "Our AI analyzes features such as mel spectrogram, tempo, rhythm, and chroma to estimate an affective vector in real time, and this vector is mapped into color space.",
+              "High arousal and positive affect are translated into warm hues; low arousal or calm affect into cool hues.",
+              "The aim is to let the listener experience the flow as color and space rather than interpreting emotion explicitly."
+            ]
+          },
+          {
+            "title": "MR-Based Visual and Haptic Feedback System",
+            "subtitle": "MR-Based Visual and Haptic Feedback System",
+            "body": [
+              "Sound is, by nature, vibration of air.",
+              "In an MR environment this vibration can be converted into light, color, and tactile vibration. The system integrates real-time acoustic analysis data with MR visualization and a haptic interface.",
+              "Waves appear as a visual field; rhythm is conveyed as bodily vibration. The structure is designed so that deaf and hearing audiences can experience the same sound through different senses.",
+              "This is not a replacement for hearing but a redistribution of perception, approaching an expansion of multisensory accessibility."
+            ]
+          }
+        ]
+      }
+    },
+    "safeRangeSystem": {
+      "ai": {
+        "description": [
+          "SAFE RANGE SYSTEM is an algorithmic system that operates on real-time face recognition and voice analysis.",
+          "Data collected through camera and microphone is quantified through facial landmark extraction, micro-expression analysis, gaze tracking, voice spectrum analysis, and measurement of inter-utterance intervals. This data is parameterized by deviation from a statistical average and repositioned within an allowable range via a normalization algorithm.",
+          "The face is output as a 3D mask based on an average model; voice is aligned to a 74 BPM rhythmic structure through digital signal processing and BPM synchronization. As a result, the individual’s distinct signals are not expanded but realigned around statistical stability, and the algorithm functions as a mechanism that converges signals toward a standard."
+        ],
+        "row2": [
+          "The work is composed of a system that collects, as input, the subtle signals detected from the audience’s face. Real-time visual data—eye movement, pupil response, lip curvature, facial muscle tension—is separated into individual elements and measured at the live input stage, then passed to the stage of Algorithmic Interpretation.",
+          "At this stage each signal is converted into a value called the Divergence Index, which measures how far it deviates from the statistical average. These deviations are not preserved as individual traits but are rearranged into quantified structural values through a process of parameterization.",
+          "The organized data is adjusted into an allowable range as it passes through a normalization field. It is then reconstructed against an average model and finally visualized as a 3D mask.",
+          "The system does not create a new face; it works by adjusting measured difference to fit a standard structure."
+        ]
+      },
+      "exhibition": {
+        "body": "The work was presented as a participatory interactive installation where the audience could directly experience, on site, the process of their face and voice being analyzed and reconstructed in real time. In a short span of time, the audience experiences how the algorithm aligns expression and speech; on screen, the result synchronized to an average model is shown. By exposing the technical process, the work is structured so that one can feel in the space how individual signals converge toward an average structure."
+      }
+    }
+  }
+}

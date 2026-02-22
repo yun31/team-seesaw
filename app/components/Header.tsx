@@ -13,24 +13,8 @@ export default function Header() {
 
   return (
     <header className="flex w-full flex-col gap-1 px-4 py-4 sm:gap-2 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-16">
-      {/* 위쪽 줄: 오른쪽에 KR / EN 버튼 */}
+      {/* 위쪽 줄: 오른쪽에 EN / KR 버튼 */}
       <div className="flex justify-end gap-1 sm:gap-2">
-        <button
-          type="button"
-          onClick={() => setLang("KR")}
-          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "KR" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "KR" ? "text-black" : "text-black/60") : lang === "KR" ? "text-white" : "text-white/60"}`}
-          style={{ fontFamily: "var(--font-pretendard)" }}
-          aria-label="한국어"
-          aria-pressed={lang === "KR"}
-        >
-          KR
-        </button>
-        <span
-          className={`text-xs sm:text-sm ${isLightHeader ? "text-black/40" : "text-white/40"}`}
-          aria-hidden
-        >
-          /
-        </span>
         <button
           type="button"
           onClick={() => setLang("EN")}
@@ -40,6 +24,22 @@ export default function Header() {
           aria-pressed={lang === "EN"}
         >
           EN
+        </button>
+        <span
+          className={`text-xs sm:text-sm ${isLightHeader ? "text-black/40" : "text-white/40"}`}
+          aria-hidden
+        >
+          /
+        </span>
+        <button
+          type="button"
+          onClick={() => setLang("KR")}
+          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "KR" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "KR" ? "text-black" : "text-black/60") : lang === "KR" ? "text-white" : "text-white/60"}`}
+          style={{ fontFamily: "var(--font-pretendard)" }}
+          aria-label="한국어"
+          aria-pressed={lang === "KR"}
+        >
+          KR
         </button>
       </div>
 
