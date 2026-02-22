@@ -11,7 +11,14 @@ export default function SafeRangeSystemPage() {
   const [activeTab, setActiveTab] = useState<TabId>("ai");
 
   return (
-    <div className="works-page min-h-screen bg-black font-sans">
+    <div
+      className={`works-page min-h-screen font-sans ${activeTab === "sound" ? "bg-black bg-cover bg-top bg-no-repeat" : "bg-black"}`}
+      style={
+        activeTab === "sound"
+          ? { backgroundImage: "url(/image/safe_sound_bg.png)" }
+          : undefined
+      }
+    >
       <Header />
 
       <main className="px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-16">
