@@ -14,7 +14,7 @@ export default function SignalAsFormPage() {
       className="works-page min-h-screen bg-black font-sans"
       style={{
         backgroundImage: "url(/image/silo_bg.png)",
-        backgroundSize: "120% auto",
+        backgroundSize: "90% auto",
         backgroundPosition: "right 20%",
         backgroundRepeat: "no-repeat",
       }}

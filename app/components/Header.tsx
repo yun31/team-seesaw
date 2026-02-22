@@ -7,6 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 export default function Header() {
   const { lang, setLang } = useLanguage();
   const pathname = usePathname();
+  const isLightHeader = pathname === "/";
 
   return (
     <header className="flex w-full flex-col gap-1 px-4 py-4 sm:gap-2 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-16">
@@ -15,7 +16,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setLang("KR")}
-          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "KR" ? "font-semibold text-black dark:text-zinc-50 opacity-100" : "text-black/60 dark:text-zinc-400 hover:opacity-80"}`}
+          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "KR" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "KR" ? "text-black" : "text-black/60") : (lang === "KR" ? "text-white" : "text-white/60")}`}
           style={{ fontFamily: "var(--font-pretendard)" }}
           aria-label="한국어"
           aria-pressed={lang === "KR"}
@@ -23,7 +24,7 @@ export default function Header() {
           KR
         </button>
         <span
-          className="text-xs text-black/40 dark:text-zinc-500 sm:text-sm"
+          className={`text-xs sm:text-sm ${isLightHeader ? "text-black/40" : "text-white/40"}`}
           aria-hidden
         >
           /
@@ -31,7 +32,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setLang("EN")}
-          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "EN" ? "font-semibold text-black dark:text-zinc-50 opacity-100" : "text-black/60 dark:text-zinc-400 hover:opacity-80"}`}
+          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "EN" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "EN" ? "text-black" : "text-black/60") : (lang === "EN" ? "text-white" : "text-white/60")}`}
           style={{ fontFamily: "var(--font-pretendard)" }}
           aria-label="English"
           aria-pressed={lang === "EN"}
@@ -44,7 +45,7 @@ export default function Header() {
       <div className="flex items-center justify-between gap-4">
         <Link
           href="/"
-          className="shrink-0 text-base font-semibold uppercase tracking-wide text-black dark:text-zinc-50 sm:text-lg md:text-xl"
+          className={`shrink-0 text-base font-semibold uppercase tracking-wide sm:text-lg md:text-xl ${isLightHeader ? "text-black" : "text-white"}`}
           style={{ fontFamily: "var(--font-pretendard)" }}
         >
           SEESAW
@@ -55,35 +56,35 @@ export default function Header() {
         >
           <Link
             href="/"
-            className={`header-nav-link text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg pb-1 border-b-2 ${
+            className={`header-nav-link text-sm hover:opacity-70 sm:text-base md:text-lg pb-1 border-b-2 ${
               pathname === "/"
-                ? "header-nav-link-active font-bold border-black dark:border-white"
+                ? "font-bold"
                 : "border-transparent"
-            }`}
+            } ${pathname === "/" ? (isLightHeader ? "border-black" : "border-white") : "border-transparent"} ${isLightHeader ? "text-black" : "text-white"}`}
           >
             Home
           </Link>
           <Link
             href="/works"
-            className={`header-nav-link text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg pb-1 border-b ${
+            className={`header-nav-link text-sm hover:opacity-70 sm:text-base md:text-lg pb-1 border-b-2 ${
               pathname === "/works"
-                ? "header-nav-link-active font-bold border-black dark:border-white"
+                ? "font-bold"
                 : "border-transparent"
-            }`}
+            } ${pathname === "/works" ? (isLightHeader ? "border-black" : "border-white") : "border-transparent"} ${isLightHeader ? "text-black" : "text-white"}`}
             title="AI · Sound Works"
           >
             <span className="sm:hidden">Works</span>
             <span className="hidden sm:inline">AI · Sound Works</span>
           </Link>
           <Link
-            href="/history"
-            className={`header-nav-link text-sm text-black hover:opacity-70 dark:text-zinc-50 sm:text-base md:text-lg pb-1 border-b ${
-              pathname === "/history"
-                ? "header-nav-link-active font-bold border-black dark:border-white"
+            href="/about"
+            className={`header-nav-link text-sm hover:opacity-70 sm:text-base md:text-lg pb-1 border-b-2 ${
+              pathname === "/about"
+                ? "font-bold"
                 : "border-transparent"
-            }`}
+            } ${pathname === "/about" ? (isLightHeader ? "border-black" : "border-white") : "border-transparent"} ${isLightHeader ? "text-black" : "text-white"}`}
           >
-            History
+            About
           </Link>
         </nav>
       </div>
