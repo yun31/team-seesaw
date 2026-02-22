@@ -136,3 +136,17 @@ body.saw-selected [class*="bg-zinc-100"] {
 .num-blink-74bpm {
   animation: num-blink-74bpm 811ms ease-in-out infinite;
 }
+
+/* 볼륨 역삼각형: 위아래로 작아졌다 커졌다 (74 BPM에 맞춤) */
+@keyframes volume-triangle-pulse {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(0.75);
+  }
+  50% {
+    transform: translateY(-8%) scaleY(1.15);
+  }
+}
+.volume-triangle-pulse {
+  animation: volume-triangle-pulse 811ms ease-in-out infinite;
+}

@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const DEVICE_IMG = "/image/safe_sound_device";
 
-/** 74 BPM = 한 비트당 ms */
-const BEAT_MS = Math.round(60000 / 74);
+/** 74 BPM: 811ms마다 한 번 */
+const INTERVAL_MS = 810;
 
 /** 키보드 on 순서: 1 → 5 → 9 → 2 → 6 → 4 → 3 → 7 → 8 */
 const KEY_ORDER = [1, 5, 9, 2, 6, 4, 3, 7, 8];
@@ -21,7 +21,7 @@ export default function SoundTabContent() {
     const id = setInterval(() => {
       setIndicatorIndex((i) => (i + 1) % 4);
       setKeyOrderIndex((i) => (i + 1) % KEY_ORDER.length);
-    }, BEAT_MS);
+    }, INTERVAL_MS);
     return () => clearInterval(id);
   }, [isPlaying]);
 
@@ -96,26 +96,39 @@ export default function SoundTabContent() {
               ))}
             </div>
 
-            {/* 디스플레이 영역: screen + 버튼 off일 때 num_off, on일 때 num_on */}
+            {/* 디스플레이 영역: btn_off → screen_off, btn_on → screen_on + 숫자 오버레이 */}
             <div className="relative mb-[13%] w-full shrink-0">
               <Image
-                src={`${DEVICE_IMG}/screen.png`}
+                src={
+                  isPlaying
+                    ? `${DEVICE_IMG}/screen_on.png`
+                    : `${DEVICE_IMG}/screen_off.png`
+                }
                 alt=""
                 width={320}
                 height={160}
                 className="mx-auto h-auto w-full max-w-full object-contain"
               />
-              <Image
-                src={
-                  isPlaying
-                    ? `${DEVICE_IMG}/num_on.png`
-                    : `${DEVICE_IMG}/num_off.png`
-                }
-                alt=""
-                width={320}
-                height={160}
-                className={`absolute left-1/2 top-[55%] h-[90%] w-[90%] max-w-full -translate-x-1/2 -translate-y-1/2 object-contain object-center ${isPlaying ? "num-blink-74bpm" : ""}`}
-              />
+              {isPlaying && (
+                <>
+                  {/* 왼쪽: num_on_1 ~ 4가 74 BPM으로 순서대로 반복 */}
+                  <Image
+                    src={`${DEVICE_IMG}/num_on_${indicatorIndex + 1}.png`}
+                    alt=""
+                    width={320}
+                    height={160}
+                    className="absolute left-[9%] top-[62%] h-[36%] w-[30%] max-w-full -translate-y-1/2 object-contain object-left"
+                  />
+                  {/* 오른쪽: 74 고정 */}
+                  <Image
+                    src={`${DEVICE_IMG}/num_on_74.png`}
+                    alt=""
+                    width={320}
+                    height={160}
+                    className="absolute right-[22%] top-[62%] h-[65%] w-[30%] max-w-full -translate-y-1/2 object-contain object-right"
+                  />
+                </>
+              )}
             </div>
 
             {/* 버튼: 클릭 시 살짝 눌렀다가 이미지 전환 (on/off 토글) */}
