@@ -8,6 +8,8 @@ export default function Header() {
   const { lang, setLang } = useLanguage();
   const pathname = usePathname();
   const isLightHeader = pathname === "/";
+  const isWorksActive =
+    pathname === "/works" || pathname.startsWith("/works/");
 
   return (
     <header className="flex w-full flex-col gap-1 px-4 py-4 sm:gap-2 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-16">
@@ -16,7 +18,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setLang("KR")}
-          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "KR" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "KR" ? "text-black" : "text-black/60") : (lang === "KR" ? "text-white" : "text-white/60")}`}
+          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "KR" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "KR" ? "text-black" : "text-black/60") : lang === "KR" ? "text-white" : "text-white/60"}`}
           style={{ fontFamily: "var(--font-pretendard)" }}
           aria-label="한국어"
           aria-pressed={lang === "KR"}
@@ -32,7 +34,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setLang("EN")}
-          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "EN" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "EN" ? "text-black" : "text-black/60") : (lang === "EN" ? "text-white" : "text-white/60")}`}
+          className={`whitespace-nowrap text-xs sm:text-sm ${lang === "EN" ? "font-semibold opacity-100" : "hover:opacity-80"} ${isLightHeader ? (lang === "EN" ? "text-black" : "text-black/60") : lang === "EN" ? "text-white" : "text-white/60"}`}
           style={{ fontFamily: "var(--font-pretendard)" }}
           aria-label="English"
           aria-pressed={lang === "EN"}
@@ -57,9 +59,7 @@ export default function Header() {
           <Link
             href="/"
             className={`header-nav-link text-sm hover:opacity-70 sm:text-base md:text-lg pb-1 border-b-2 ${
-              pathname === "/"
-                ? "font-bold"
-                : "border-transparent"
+              pathname === "/" ? "font-bold" : "border-transparent"
             } ${pathname === "/" ? (isLightHeader ? "border-black" : "border-white") : "border-transparent"} ${isLightHeader ? "text-black" : "text-white"}`}
           >
             Home
@@ -67,21 +67,16 @@ export default function Header() {
           <Link
             href="/works"
             className={`header-nav-link text-sm hover:opacity-70 sm:text-base md:text-lg pb-1 border-b-2 ${
-              pathname === "/works"
-                ? "font-bold"
-                : "border-transparent"
-            } ${pathname === "/works" ? (isLightHeader ? "border-black" : "border-white") : "border-transparent"} ${isLightHeader ? "text-black" : "text-white"}`}
-            title="AI · Sound Works"
+              isWorksActive ? "header-nav-link-active font-bold" : "border-transparent"
+            } ${isWorksActive ? (isLightHeader ? "border-black" : "border-white") : "border-transparent"} ${isLightHeader ? "text-black" : "text-white"}`}
+            title="Works"
           >
-            <span className="sm:hidden">Works</span>
-            <span className="hidden sm:inline">AI · Sound Works</span>
+            Works
           </Link>
           <Link
             href="/about"
             className={`header-nav-link text-sm hover:opacity-70 sm:text-base md:text-lg pb-1 border-b-2 ${
-              pathname === "/about"
-                ? "font-bold"
-                : "border-transparent"
+              pathname === "/about" ? "font-bold" : "border-transparent"
             } ${pathname === "/about" ? (isLightHeader ? "border-black" : "border-white") : "border-transparent"} ${isLightHeader ? "text-black" : "text-white"}`}
           >
             About

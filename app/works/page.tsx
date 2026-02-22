@@ -97,7 +97,7 @@ export default function WorksPage() {
 
                 {/* 3행: 그 아래 사진 (오른쪽 정렬, 1/2 너비, 각 이미지 원본 비율) */}
                 <div className="mt-6 flex justify-end sm:mt-8">
-                  <div className="w-1/2 min-w-[200px]">
+                  <div className="w-1/2 min-w-[300px]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={work.image} alt="" className="h-auto w-full" />
                   </div>
