@@ -20,14 +20,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* 홈 진입 시 항상 밝은 SEE 화면을 유지하기 위해 라이트 팔레트를 그대로 사용 */
+    --background: #e6e7e9;
+    --foreground: #171717;
   }
 }
 
 body {
   background: #e6e7e9;
-  color: var(--foreground);
+  color: #171717;
   transition:
     background-color 0.5s ease,
     color 0.5s ease;
