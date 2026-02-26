@@ -92,6 +92,14 @@ body.saw-selected header .header-nav-link-active {
   header .header-nav-link-active {
     border-bottom-color: #fff !important;
   }
+  /* 홈 페이지(SEE 화면)는 다크 모드에서도 항상 밝은 배경 + 어두운 텍스트 유지 */
+  body:not(.saw-selected) .home-root {
+    background: #e6e7e9 !important;
+    color: #171717 !important;
+  }
+  body:not(.saw-selected) .home-root * {
+    color: #171717 !important;
+  }
 }
 body.saw-selected [class*="text-zinc-400"],
 body.saw-selected [class*="text-zinc-500"] {

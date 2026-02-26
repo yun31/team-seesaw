@@ -4,7 +4,7 @@ import MainPageLowerContent from "./components/MainPageLowerContent";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#E6E7E9] font-sans">
+    <div className="home-root min-h-screen bg-[#E6E7E9] font-sans">
       <Header />
       <CenterImageSection />
 
