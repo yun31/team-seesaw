@@ -7,6 +7,8 @@ const WORKS = [
     year: "2025",
     category: "AI Exhibition",
     title: "SAFE RANGE SYSTEM",
+    description:
+      "Interactive Media Art / AI-driven Audio-Visual Installation / Real-time Biometric Interface",
     image: "/image/thum_safe.png",
     detailHref: "/works/safe-range-system",
   },
@@ -14,6 +16,8 @@ const WORKS = [
     year: "2025",
     category: "VR Exhibition",
     title: "RESONANCE PROTOCOL",
+    description:
+      "Interactive VR Art / AI-driven Immersive Installation / Real-time Biometric Translation System",
     image: "/image/thum_vr.png",
     detailHref: "/works/resonance-protocol",
   },
@@ -21,6 +25,8 @@ const WORKS = [
     year: "2024",
     category: "AI Sound Universal Project",
     title: "SIGNAL AS FORM",
+    description:
+      "2024, Audio-visual Research Prototype, Real-time generative visualization, Stereo Sound, Dimensions variable",
     image: "/image/thum_silo.png",
     detailHref: "/works/signal-as-form",
   },
@@ -88,6 +94,12 @@ export default function WorksPage() {
                       style={{ fontFamily: "var(--font-pretendard)" }}
                     >
                       {work.title}
+                    </p>
+                    <p
+                      className="mt-1 text-xs text-white/70 sm:text-sm"
+                      style={{ fontFamily: "var(--font-pretendard)" }}
+                    >
+                      {work.description}
                     </p>
                   </div>
                   <div className="shrink-0 pt-1">
